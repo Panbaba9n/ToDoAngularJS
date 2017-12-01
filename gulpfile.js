@@ -1,4 +1,10 @@
 /**
+ * @author  Jozef Butko
+ * @url     www.jozefbutko.com/resume
+ * @date    March 2015
+ * @license MIT
+ *
+ * AngularJS Boilerplate: Build, watch and other useful tasks
  *
  * The build process consists of following steps:
  * 1. clean /_build folder
@@ -199,7 +205,7 @@ gulp.task('templates', function() {
     ])
     .pipe($.minifyHtml())
     .pipe($.angularTemplatecache({
-      module: 'boilerplate'
+      module: 'todo'
     }))
     .pipe(gulp.dest('_build/js'));
 });
@@ -233,7 +239,7 @@ gulp.task('default', ['browser-sync', 'sass', 'minify-css'], function() {
       reload(file.path);
     }
   });
-  gulp.watch(['*.html', 'components/**/*.html', 'app/**/*.html'], ['bs-reload']);
+  gulp.watch(['*.html', 'components/**/*.html', 'app/**/*.html', 'views/*.html'], ['bs-reload']);
   gulp.watch(['app/**/*.js', 'components/**/*.js', 'js/*.js'], ['bs-reload']);
   gulp.watch('styles/**/*.scss', ['sass', 'minify-css']);
 });
