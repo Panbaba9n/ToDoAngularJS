@@ -4,10 +4,19 @@
     .module('todo')
     .run(run);
 
-    function run() {
+	run.$inject = ['$rootScope', '$state'];
 
-        console.log("Hi!");
+	function run($rootScope, $state) {
 
-    }
+		$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+			if (toState.isAuthentificaded) {
+				/*nothing to do*/
+			} else /*if (toState.name !== 'home' && !AuthTest.isAuthentificaded())*/ {
+				event.preventDefault();
+				$state.go('home');
+			}
+		});
+
+	};
     
 })();

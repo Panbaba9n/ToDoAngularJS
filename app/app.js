@@ -5,7 +5,16 @@
      */
     angular
         .module('todo', [
-            // 'test'
+            'ui.router',
+      		'ngResource',
+      		'ngMaterial',
+      		'ngMessages',
+      		'LocalStorageModule',
+
+      		'infotable',
+
+      		'registration',
+      		'login'
         ]);
 
 

@@ -38,15 +38,18 @@
 		<![endif]-->
 
 
-		<h1>Hellow!</h1>
+		<todo-app></todo-app>
 
 
 	</body>
+
 
 	<!-- Vendors -->
 	<!-- build:nonangularlibs js/nonangularlibs.js -->
 	<script type="text/javascript" src="js/nonangular/jquery-1.11.2.min.js"></script>
 	<!-- endbuild -->
+
+
 
 	<!-- Non-angular libraries -->
 	<!-- build:libs js/libs.js -->
@@ -54,6 +57,8 @@
 	<script type="text/javascript" src="node_modules/moment/moment.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 	<!-- endbuild -->
+
+
 
 	<!-- Angular external libraries for application -->
 	<!-- build:angularlibs js/angularlibs.js -->
@@ -68,17 +73,42 @@
 	<script type="text/javascript" src="node_modules/angular-local-storage/dist/angular-local-storage.js"></script>
 	<!-- endbuild -->
 
+
+
 	<!-- Angular components -->
 	<!-- build:appcomponents js/appcomponents.js -->
 	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/app.config.js"></script>
 	<script type="text/javascript" src="app/app.run.js"></script>
+	<script type="text/javascript" src="app/app.directive.js"></script>
+
+	<script type="text/javascript" src="app/infotable/infotable.js"></script>
+	<script type="text/javascript" src="app/infotable/infotable.config.js"></script>
+	<!-- <script type="text/javascript" src="app/infotable/infotable.run.js"></script> -->
+	<!-- <script type="text/javascript" src="app/infotable/infotable.directive.js"></script> -->
+
+	<script type="text/javascript" src="app/user/registration/registration.js"></script>
+	<script type="text/javascript" src="app/user/registration/registration.config.js"></script>
+
+	<script type="text/javascript" src="app/user/login/login.js"></script>
+	<script type="text/javascript" src="app/user/login/login.config.js"></script>
 	<!-- endbuild -->
+
+
 
 	<!-- Application sections -->
 	<!-- build:mainapp js/mainapp.js -->
 	<script type="text/javascript" src="app/app.factory.js"></script>
 	<script type="text/javascript" src="app/app.controller.js"></script>
+
+	<script type="text/javascript" src="app/infotable/infotable.factory.js"></script>
+	<script type="text/javascript" src="app/infotable/infotable.controller.js"></script>
+
+	<script type="text/javascript" src="app/user/registration/registration.controller.js"></script>
+
+	<script type="text/javascript" src="app/user/login/login.controller.js"></script>
 	<!-- endbuild -->
+
 
 
 	<!-- templates from $templateCache -->
