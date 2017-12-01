@@ -1,0 +1,69 @@
+{
+  "name": "todoangularjs",
+  "version": "1.0.0",
+  "description": "toDo app",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Panbaba9n/ToDoAngularJS.git"
+  },
+  "keywords": [
+    "todo",
+    "app",
+    "AngularJS"
+  ],
+  "author": "Vladimir Kolesnikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Panbaba9n/ToDoAngularJS/issues"
+  },
+  "homepage": "https://github.com/Panbaba9n/ToDoAngularJS#readme",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-animate": "^1.6.7",
+    "angular-aria": "^1.6.7",
+    "angular-local-storage": "^0.7.1",
+    "angular-material": "^1.1.5",
+    "angular-messages": "^1.6.7",
+    "angular-resource": "^1.6.7",
+    "angular-sanitize": "^1.6.7",
+    "angular-ui-router": "^0.4.3",
+    "moment": "^2.19.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "connect": "^3.6.5",
+    "connect-livereload": "^0.6.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-changed": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.0.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^8.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-usemin": "^0.3.28",
+    "http-server": "^0.10.0",
+    "opn": "^5.1.0",
+    "run-sequence": "^2.2.0",
+    "serve-index": "^1.9.1",
+    "serve-static": "^1.13.1",
+    "tiny-lr": "^1.0.5",
+    "watch": "^1.0.2"
+  }
+}
