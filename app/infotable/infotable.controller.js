@@ -4,15 +4,24 @@
     .module('infotable')
     .controller('InfotableController', infotableController);
 
-    infotableController.$inject = ['$scope', 'DataInfotable'];
+    infotableController.$inject = ['$scope', 'DataInfotable', 'User'];
 
 
-    function infotableController($scope, DataInfotable) {
+    function infotableController($scope, DataInfotable, User) {
 
         // 'controller as' syntax
         var vm = this;
 
-        console.log( DataInfotable.variable() );
+        vm.logout = logout;
+
+
+        // vm.logout();
+
+        /* /////////////////////// */
+
+        function logout() {
+        	return User.logout();
+        }
 
     };
 

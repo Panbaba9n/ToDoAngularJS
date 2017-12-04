@@ -13,6 +13,7 @@
 
       		'infotable',
 
+          'user',
       		'registration',
       		'login'
         ]);

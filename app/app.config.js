@@ -4,9 +4,9 @@
     .module('todo')
     .config(config);
 
-	config.$inject = ['$stateProvider', '$urlRouterProvider'];
+	config.$inject = ['$stateProvider', '$urlRouterProvider', 'localStorageServiceProvider'];
 
-	function config($stateProvider, $urlRouterProvider) {
+	function config($stateProvider, $urlRouterProvider, localStorageServiceProvider) {
 
 		$urlRouterProvider.otherwise('/');
 
@@ -25,6 +25,8 @@
 			controllerAs: 'home',
 			isAuthentificaded: true
 		});
+
+		localStorageServiceProvider.setStorageType('sessionStorage');
 
 	};
     

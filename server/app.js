@@ -4,11 +4,27 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var registration = require('./routes/registration');
+var login = require('./routes/login');
 
 var app = express();
+
+
+//Set up mongoose connection
+var mongoose = require('mongoose');
+var dbConfig = require('./config/db.config.js');
+mongoose.connect(dbConfig.database, {
+  useMongoClient: true
+});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
+// var User = require('./models/users'); // get mongoose model
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,8 +38,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+// setting CORS headers
+var corsOptions = require('./config/cors.config.js');
+app.use(cors(corsOptions));
+
+
 app.use('/', index);
 app.use('/users', users);
+app.use('/registration', registration);
+app.use('/login', login);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

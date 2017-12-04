@@ -12,7 +12,7 @@
 		$stateProvider
 		.state('login', {
 			url: '/login',
-			template: '<div>login</div>',
+			templateUrl: 'app/user/login/login.html',
 			controller: 'LoginController',
 			controllerAs: 'login',
 			isAuthentificaded: true

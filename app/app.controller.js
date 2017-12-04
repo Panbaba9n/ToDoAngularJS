@@ -8,13 +8,17 @@
     .module('todo')
     .controller('TodoController', TodoController);
 
-    TodoController.$inject = ['$scope'];
+    TodoController.$inject = ['$scope', 'User'];
 
 
-    function TodoController($scope) {
+    function TodoController($scope, User) {
 
         // 'controller as' syntax
         var vm = this;
+
+
+        /* /////////////////////// */
+
 
     };
 

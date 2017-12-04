@@ -4,16 +4,16 @@
     .module('todo')
     .run(run);
 
-	run.$inject = ['$rootScope', '$state'];
+	run.$inject = ['$rootScope', '$state', 'User'];
 
-	function run($rootScope, $state) {
+	function run($rootScope, $state, User) {
 
 		$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
 			if (toState.isAuthentificaded) {
 				/*nothing to do*/
-			} else /*if (toState.name !== 'home' && !AuthTest.isAuthentificaded())*/ {
+			} else if ( !User.getAuth() ) {
 				event.preventDefault();
-				$state.go('home');
+				$state.go('login');
 			}
 		});
 
